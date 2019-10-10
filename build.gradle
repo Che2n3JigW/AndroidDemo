@@ -2,6 +2,10 @@
 apply from: "config.gradle"
 buildscript {
     repositories {
+        //阿里云的镜像库
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
         google()
         jcenter()
 
@@ -16,9 +20,12 @@ buildscript {
 
 allprojects {
     repositories {
+        //阿里云的镜像库
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
         google()
         jcenter()
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 
     }
 }
