@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.basedemo.components4.activity.ActActivity;
+import com.example.basedemo.utils.ActivityUtils;
+
 public class MainActivity extends AppCompatActivity {
 
     private MyListAdapter adapter;
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         initView();
 
         initListener();
+
     }
 
     private void initListener() {
@@ -26,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(int position) {
                 switch (position) {
                     case 0://
-                        
+                        ActivityUtils.startActivity(ActActivity.class);
                         break;
                     case 1:
                         break;
