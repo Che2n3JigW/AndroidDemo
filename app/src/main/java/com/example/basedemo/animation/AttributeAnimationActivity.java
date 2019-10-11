@@ -1,19 +1,18 @@
 package com.example.basedemo.animation;
 
 import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.basedemo.R;
-import com.example.basedemo.utils.ActivityUtils;
 
 public class AttributeAnimationActivity extends AppCompatActivity {
 
@@ -26,38 +25,39 @@ public class AttributeAnimationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_attribute_animation);
         textView = findViewById(R.id.textView);
 
-        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(textView, "rotation", 360f);
-        objectAnimator.setDuration(2000);
-        objectAnimator.setInterpolator(new OvershootInterpolator());
-        objectAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-//                Log.e("===cjw", textView.getX() + ", " + textView.getY());
-                Log.e("===cjw", textView.getRotationX()+ ", " + textView.getRotationY());
-            }
-        });
-        objectAnimator.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
+//        ValueAnimatorDemo();
 
-            }
+        ObjectAnimatorDemo();
 
-            @Override
+
+    }
+
+    private void ObjectAnimatorDemo() {
+        ObjectAnimator animation = ObjectAnimator.ofFloat(textView, "translationX", 100f);
+        animation.setDuration(1000);
+        animation.addListener(new AnimatorListenerAdapter() {
             public void onAnimationEnd(Animator animation) {
-                ActivityUtils.startActivity(RotationActivity.class);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
+                Log.e("===cjw", "onAnimationEnd");
             }
         });
-        objectAnimator.start();
 
+        animation.start();
+    }
+
+    private void ValueAnimatorDemo() {
+        ValueAnimator animation = ValueAnimator.ofFloat(0f, 100f);
+        animation.setDuration(1000);
+        animation.start();
+
+        animation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator updatedAnimation) {
+                // You can use the animated value in a property that uses the
+                // same type as the animation. In this case, you can use the
+                // float value in the translationX property.
+                float animatedValue = (float) updatedAnimation.getAnimatedValue();
+                textView.setTranslationX(animatedValue);
+            }
+        });
     }
 }
