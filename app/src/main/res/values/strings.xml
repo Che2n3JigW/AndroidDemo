@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BaseDemo</string>
     <string name="string_test">test</string>
+    <string name="string_title">Title</string>
 </resources>

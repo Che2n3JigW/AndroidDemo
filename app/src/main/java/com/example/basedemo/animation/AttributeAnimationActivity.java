@@ -63,7 +63,8 @@ public class AttributeAnimationActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                ActivityUtils.startActivity(MyZoomActivity.class);
+//                ActivityUtils.startActivity(MyZoomActivity.class);
+                ActivityUtils.startActivity(ScenceActivity.class);
             }
 
             @Override

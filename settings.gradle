@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':demo_transitionn_base'
 rootProject.name='BaseDemo'
