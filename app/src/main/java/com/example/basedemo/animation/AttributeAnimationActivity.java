@@ -48,15 +48,34 @@ public class AttributeAnimationActivity extends AppCompatActivity {
         bouncer.play(objectAnimatorA);
         bouncer.play(objectAnimatorB).after(objectAnimatorA).with(objectAnimatorD);
         bouncer.play(objectAnimatorC).after(objectAnimatorB);
-        bouncer.setDuration(2000);
-        bouncer.start();
-//        ValueAnimator fadeAnim = ObjectAnimator.ofFloat(textView, "alpha", 1f, 0f);
-//        fadeAnim.setDuration(2000);
 
-//        AnimatorSet animatorSet = new AnimatorSet();
-//        animatorSet.play(bouncer).before(fadeAnim);
-//        animatorSet.start();
-        ActivityUtils.startActivity(MyZoomActivity.class);
+        ValueAnimator fadeAnim = ObjectAnimator.ofFloat(textView, "alpha", 1f, 0f);
+        fadeAnim.setDuration(2000);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.play(bouncer).before(fadeAnim);
+        animatorSet.start();
+        animatorSet.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                ActivityUtils.startActivity(MyZoomActivity.class);
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

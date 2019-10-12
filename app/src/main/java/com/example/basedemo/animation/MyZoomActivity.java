@@ -29,7 +29,6 @@ public class MyZoomActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zoom);
 
-
         final ImageButton thumb1View = findViewById(R.id.thumb_button_1);
         thumb1View.setOnClickListener(new View.OnClickListener() {
             @Override
