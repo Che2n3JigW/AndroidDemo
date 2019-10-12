@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.basedemo.R;
+import com.example.basedemo.utils.ActivityUtils;
 
 public class AttributeAnimationActivity extends AppCompatActivity {
 
@@ -36,12 +37,11 @@ public class AttributeAnimationActivity extends AppCompatActivity {
 //        }
         AnimatorSetDemo();
 
-
     }
 
     private void AnimatorSetDemo() {
         AnimatorSet bouncer = new AnimatorSet();
-        ObjectAnimator objectAnimatorA = ObjectAnimator.ofFloat(textView,"translationX" , 0f, 300f);
+        ObjectAnimator objectAnimatorA = ObjectAnimator.ofFloat(textView, "translationX", 0f, 300f);
         ObjectAnimator objectAnimatorB = ObjectAnimator.ofFloat(textView, "translationY", 0f, 300f);
         ObjectAnimator objectAnimatorC = ObjectAnimator.ofFloat(textView, "translationX", 300f, 0f);
         ObjectAnimator objectAnimatorD = ObjectAnimator.ofFloat(textView, "rotation", 0f, 360f);
@@ -56,15 +56,15 @@ public class AttributeAnimationActivity extends AppCompatActivity {
 //        AnimatorSet animatorSet = new AnimatorSet();
 //        animatorSet.play(bouncer).before(fadeAnim);
 //        animatorSet.start();
-
+        ActivityUtils.startActivity(MyZoomActivity.class);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void ObjectAnimatorDemo1() {//设置两个动画
         Path path = new Path();
-        path.moveTo(0,1);
-        path.lineTo(300,3);
-        ObjectAnimator.ofFloat(textView,"translationX", "translationY",path)
+        path.moveTo(0, 1);
+        path.lineTo(300, 3);
+        ObjectAnimator.ofFloat(textView, "translationX", "translationY", path)
                 .setDuration(3000)
                 .start();
     }

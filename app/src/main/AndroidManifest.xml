@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animation.RotationActivity"></activity>
+        <activity android:name=".animation.MyZoomActivity"></activity>
+        <activity android:name=".animation.RotationActivity" />
         <activity android:name=".animation.AttributeAnimationActivity" />
         <activity android:name=".components4.activity.ActActivity" />
         <activity android:name=".MainActivity">
