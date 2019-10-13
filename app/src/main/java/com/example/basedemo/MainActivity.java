@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private MyListAdapter adapter;
     private String[] strings;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

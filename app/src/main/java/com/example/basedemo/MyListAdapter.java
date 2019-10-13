@@ -20,7 +20,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     }
 
     //item点击事件绑定
-    public void setOnItemClickListener(onItemClickListener itemClickListener) {
+    void setOnItemClickListener(onItemClickListener itemClickListener) {
         this.itemClickListener = itemClickListener;
     }
 
