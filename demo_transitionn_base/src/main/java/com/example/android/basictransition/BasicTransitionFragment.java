@@ -53,9 +53,9 @@ public class BasicTransitionFragment extends Fragment
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_basic_transition, container, false);
         assert view != null;
-        RadioGroup radioGroup = (RadioGroup) view.findViewById(R.id.select_scene);
+        RadioGroup radioGroup = view.findViewById(R.id.select_scene);
         radioGroup.setOnCheckedChangeListener(this);
-        mSceneRoot = (ViewGroup) view.findViewById(R.id.scene_root);
+        mSceneRoot = view.findViewById(R.id.scene_root);
 
         // BEGIN_INCLUDE(instantiation_from_view)
         // A Scene can be instantiated from a live view hierarchy.

@@ -37,26 +37,25 @@
 31-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:26:9-45
 32        android:label="@string/app_name"
 32-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:27:9-41
-33        android:testOnly="true"
-34        android:theme="@style/AppTheme" >
-34-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:28:9-40
-35        <activity
-35-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:29:9-37:20
-36            android:name="com.example.android.basictransition.MainActivity"
-36-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:30:13-41
-37            android:label="@string/app_name" >
-37-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:31:13-45
-38            <intent-filter>
-38-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:32:13-36:29
-39                <action android:name="android.intent.action.MAIN" />
-39-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:33:17-69
-39-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:33:25-66
-40
-41                <category android:name="android.intent.category.LAUNCHER" />
-41-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:35:17-77
-41-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:35:27-74
-42            </intent-filter>
-43        </activity>
-44    </application>
-45
-46</manifest>
+33        android:theme="@style/AppTheme" >
+33-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:28:9-40
+34        <activity
+34-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:29:9-37:20
+35            android:name="com.example.android.basictransition.MainActivity"
+35-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:30:13-41
+36            android:label="@string/app_name" >
+36-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:31:13-45
+37            <intent-filter>
+37-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:32:13-36:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:33:17-69
+38-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:33:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:35:17-77
+40-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:35:27-74
+41            </intent-filter>
+42        </activity>
+43    </application>
+44
+45</manifest>
