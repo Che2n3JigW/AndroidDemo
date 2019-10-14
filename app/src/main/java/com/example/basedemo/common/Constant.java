@@ -11,5 +11,9 @@ public class Constant {
     public static final String MAIN_ATTRIBUTE_ANIMATION = "ATTRIBUTE_ANIMATION";
     public static final String MAIN_FRAGMENT = "FRAGMENT";
     public static final String MAIN_INTENT = "INTENT";
+    public static final String MAIN_RECENT = "RECENT";
+
+    public final static String KEY_EXTRA_NEW_DOCUMENT_COUNTER
+            = "KEY_EXTRA_NEW_DOCUMENT_COUNTER";
 
 }
