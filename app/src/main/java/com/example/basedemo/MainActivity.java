@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.basedemo.animation.AttributeAnimationActivity;
 import com.example.basedemo.common.Constant;
 import com.example.basedemo.components4.activity.ActActivity;
+import com.example.basedemo.components4.fragment.FragmentDemoActivity;
 import com.example.basedemo.utils.ActivityUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,24 +37,25 @@ public class MainActivity extends AppCompatActivity {
                 Constant.MAIN_SERVICE,
                 Constant.MAIN_BROADCAST_RECEIVE,
                 Constant.MAIN_CONTENT_PROVIDER,
-                Constant.MAIN_ATTRIBUTE_ANIMATION
+                Constant.MAIN_ATTRIBUTE_ANIMATION,
+                Constant.MAIN_FRAGMENT
         };
     }
 
     private void initListener() {
-        adapter.setOnItemClickListener(new MyListAdapter.onItemClickListener() {
-            @Override
-            public void onClick(int position) {
-                switch (strings[position]) {
-                    case Constant.MAIN_ACTIVITY://
-                        ActivityUtils.startActivity(ActActivity.class);
-                        break;
-                    case Constant.MAIN_SERVICE:
-                        break;
-                    case Constant.MAIN_ATTRIBUTE_ANIMATION:
-                        ActivityUtils.startActivity(AttributeAnimationActivity.class);
-                        break;
-                }
+        adapter.setOnItemClickListener(position -> {
+            switch (strings[position]) {
+                case Constant.MAIN_ACTIVITY://
+                    ActivityUtils.startActivity(ActActivity.class);
+                    break;
+                case Constant.MAIN_SERVICE:
+                    break;
+                case Constant.MAIN_ATTRIBUTE_ANIMATION:
+                    ActivityUtils.startActivity(AttributeAnimationActivity.class);
+                    break;
+                case Constant.MAIN_FRAGMENT:
+                    ActivityUtils.startActivity(FragmentDemoActivity.class);
+                    break;
             }
         });
     }

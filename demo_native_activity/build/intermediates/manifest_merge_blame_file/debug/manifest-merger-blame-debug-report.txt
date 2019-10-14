@@ -25,42 +25,41 @@
 18-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:15:7-30
 19        android:icon="@mipmap/ic_launcher"
 19-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:13:7-41
-20        android:label="@string/app_name"
+20        android:label="@string/app_name" >
 20-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:14:7-39
-21        android:testOnly="true" >
-22
-23        <!--
-24         Our activity is the built-in NativeActivity framework class.
-25         This will take care of integrating with our NDK code.
-26        -->
-27        <activity
-27-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:20:5-30:16
-28            android:name="android.app.NativeActivity"
-28-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:20:15-56
-29            android:configChanges="orientation|keyboardHidden"
-29-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:22:15-65
-30            android:label="@string/app_name" >
-30-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:21:15-47
-31
-32            <!-- Tell NativeActivity the name of our .so -->
-33            <meta-data
-33-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:24:7-25:52
-34                android:name="android.app.lib_name"
-34-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:24:18-53
-35                android:value="native-activity" />
-35-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:25:18-49
-36
-37            <intent-filter>
-37-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:26:7-29:23
-38                <action android:name="android.intent.action.MAIN" />
-38-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:27:9-61
-38-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:27:17-58
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:28:9-69
-40-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:28:19-66
-41            </intent-filter>
-42        </activity>
-43    </application>
-44
-45</manifest> <!-- END_INCLUDE(manifest) -->
+21
+22        <!--
+23         Our activity is the built-in NativeActivity framework class.
+24         This will take care of integrating with our NDK code.
+25        -->
+26        <activity
+26-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:20:5-30:16
+27            android:name="android.app.NativeActivity"
+27-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:20:15-56
+28            android:configChanges="orientation|keyboardHidden"
+28-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:22:15-65
+29            android:label="@string/app_name" >
+29-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:21:15-47
+30
+31            <!-- Tell NativeActivity the name of our .so -->
+32            <meta-data
+32-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:24:7-25:52
+33                android:name="android.app.lib_name"
+33-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:24:18-53
+34                android:value="native-activity" />
+34-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:25:18-49
+35
+36            <intent-filter>
+36-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:26:7-29:23
+37                <action android:name="android.intent.action.MAIN" />
+37-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:27:9-61
+37-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:27:17-58
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:28:9-69
+39-->E:\Android\BaseDemo\demo_native_activity\src\main\AndroidManifest.xml:28:19-66
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest> <!-- END_INCLUDE(manifest) -->
