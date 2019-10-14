@@ -10,13 +10,13 @@ import com.example.basedemo.animation.AttributeAnimationActivity;
 import com.example.basedemo.common.Constant;
 import com.example.basedemo.components4.activity.ActActivity;
 import com.example.basedemo.components4.fragment.FragmentDemoActivity;
+import com.example.basedemo.intent.IntentDemoActivity;
 import com.example.basedemo.utils.ActivityUtils;
 
 public class MainActivity extends AppCompatActivity {
 
     private MyListAdapter adapter;
     private String[] strings;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 Constant.MAIN_BROADCAST_RECEIVE,
                 Constant.MAIN_CONTENT_PROVIDER,
                 Constant.MAIN_ATTRIBUTE_ANIMATION,
-                Constant.MAIN_FRAGMENT
+                Constant.MAIN_FRAGMENT,
+                Constant.MAIN_INTENT,
         };
     }
 
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case Constant.MAIN_FRAGMENT:
                     ActivityUtils.startActivity(FragmentDemoActivity.class);
+                    break;
+                case Constant.MAIN_INTENT:
+                    ActivityUtils.startActivity(IntentDemoActivity.class);
                     break;
             }
         });

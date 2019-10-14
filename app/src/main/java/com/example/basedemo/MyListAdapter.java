@@ -8,8 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder>
-        {
+public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder> {
 
     private String[] strings;
     private onItemClickListener itemClickListener;
@@ -56,8 +55,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
         @Override
         public void onClick(View v) {
-            if (itemClickListener!=null){
-            itemClickListener.onClick(getAdapterPosition());
+            if (itemClickListener != null) {
+                itemClickListener.onClick(getAdapterPosition());
             }
         }
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".components4.fragment.FragmentDemoActivity"></activity>
+        <activity android:name=".intent.IntentDemoActivity"></activity>
+        <activity android:name=".components4.fragment.FragmentDemoActivity" />
         <activity android:name=".animation.ScenceActivity" />
         <activity android:name=".animation.MyZoomActivity" />
         <activity android:name=".animation.RotationActivity" />
