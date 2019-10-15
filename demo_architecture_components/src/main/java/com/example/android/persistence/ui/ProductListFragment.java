@@ -20,7 +20,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
@@ -34,7 +33,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.android.persistence.R;
 import com.example.android.persistence.databinding.ListFragmentBinding;
 import com.example.android.persistence.db.entity.ProductEntity;
-import com.example.android.persistence.model.Product;
 import com.example.android.persistence.viewmodel.ProductListViewModel;
 
 import java.util.List;
@@ -65,15 +63,12 @@ public class ProductListFragment extends Fragment {
         final ProductListViewModel viewModel =
                 new ViewModelProvider(this).get(ProductListViewModel.class);
 
-        mBinding.productsSearchBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Editable query = mBinding.productsSearchBox.getText();
-                if (query == null || query.toString().isEmpty()) {
-                    subscribeUi(viewModel.getProducts());
-                } else {
-                    subscribeUi(viewModel.searchProducts("*" + query + "*"));
-                }
+        mBinding.productsSearchBtn.setOnClickListener(v -> {
+            Editable query = mBinding.productsSearchBox.getText();
+            if (query == null || query.toString().isEmpty()) {
+                subscribeUi(viewModel.getProducts());
+            } else {
+                subscribeUi(viewModel.searchProducts("*" + query + "*"));
             }
         });
 
@@ -98,13 +93,10 @@ public class ProductListFragment extends Fragment {
         });
     }
 
-    private final ProductClickCallback mProductClickCallback = new ProductClickCallback() {
-        @Override
-        public void onClick(Product product) {
+    private final ProductClickCallback mProductClickCallback = product -> {
 
-            if (getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
-                ((MainActivity) getActivity()).show(product);
-            }
+        if (getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
+            ((MainActivity) getActivity()).show(product);
         }
     };
 }

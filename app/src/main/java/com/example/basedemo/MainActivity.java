@@ -11,6 +11,7 @@ import com.example.basedemo.common.Constant;
 import com.example.basedemo.components4.activity.ActActivity;
 import com.example.basedemo.components4.fragment.FragmentDemoActivity;
 import com.example.basedemo.intent.IntentDemoActivity;
+import com.example.basedemo.my_lifecycle.LifecycleDemoActivity;
 import com.example.basedemo.recents.DocumentCentricActivity;
 import com.example.basedemo.utils.ActivityUtils;
 import com.example.hellojni.HelloJni;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Constant.MAIN_INTENT,
                 Constant.MAIN_RECENT,
                 Constant.MAIN_HELLO_JNI,
+                Constant.MAIN_LIFECYCLE,
         };
     }
 
@@ -69,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case Constant.MAIN_HELLO_JNI:
                     ActivityUtils.startActivity(HelloJni.class);
+                    break;
+                case Constant.MAIN_LIFECYCLE:
+                    ActivityUtils.startActivity(LifecycleDemoActivity.class);
                     break;
             }
         });
