@@ -13,6 +13,7 @@ import com.example.basedemo.components4.fragment.FragmentDemoActivity;
 import com.example.basedemo.intent.IntentDemoActivity;
 import com.example.basedemo.recents.DocumentCentricActivity;
 import com.example.basedemo.utils.ActivityUtils;
+import com.example.hellojni.HelloJni;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Constant.MAIN_FRAGMENT,
                 Constant.MAIN_INTENT,
                 Constant.MAIN_RECENT,
+                Constant.MAIN_HELLO_JNI,
         };
     }
 
@@ -64,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case Constant.MAIN_RECENT:
                     ActivityUtils.startActivity(DocumentCentricActivity.class);
+                    break;
+                case Constant.MAIN_HELLO_JNI:
+                    ActivityUtils.startActivity(HelloJni.class);
                     break;
             }
         });
