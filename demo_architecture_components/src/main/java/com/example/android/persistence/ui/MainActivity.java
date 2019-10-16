@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     /** Shows the product detail fragment */
     public void show(Product product) {
         ProductFragment productFragment = ProductFragment.forProduct(product.getId());
-
         getSupportFragmentManager()
                 .beginTransaction()
                 .addToBackStack("product")

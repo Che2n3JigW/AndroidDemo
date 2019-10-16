@@ -7,23 +7,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.basedemo.R;
 
-public class LifecycleDemoActivity extends AppCompatActivity {
-    public static final String TAG = "LifecycleDemoActivity";
+public class LifecycleDemoActivity extends AppCompatActivity
+implements LifecycleDemoCallback{
+
+    private static final String TAG = "LifecycleDemoActivity";
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lifecycle_demo);
 
-        TextView textView = findViewById(R.id.textView);
+        textView = findViewById(R.id.textView);
 
-        MyObserver myObserver = new MyObserver(this, getLifecycle(), new MyObserver.MyCallback() {
-            @Override
-            public void update(String data) {
-                textView.setText(data);
-            }
+        MyObserver myObserver =
+                new MyObserver(this, this, this);
+
+
+        textView.setOnClickListener(v -> {
+            myObserver.update();
         });
-        getLifecycle().addObserver(myObserver);
+    }
 
+    @Override
+    public void showData(String s) {
+        textView.setText(s);
     }
 }

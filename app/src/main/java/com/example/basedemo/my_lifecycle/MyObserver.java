@@ -1,47 +1,31 @@
 package com.example.basedemo.my_lifecycle;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.OnLifecycleEvent;
 
-/**
- * 观察者
- */
 public class MyObserver implements LifecycleObserver {
 
-    private static final String TAG = "MyObserver";
     private Context context;
-    private Lifecycle lifecycle;
-    private MyCallback callback;
+    private LifecycleDemoCallback callback;
 
-    public MyObserver(Context context, Lifecycle lifecycle, MyCallback callback){
+    public MyObserver(LifecycleOwner lifecycleOwner,
+                      LifecycleDemoCallback callback, Context context) {
         this.context = context;
-        this.lifecycle = lifecycle;
         this.callback = callback;
+        lifecycleOwner.getLifecycle().addObserver(this);
     }
+
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void initData() {
-        String data = "模拟数据";
-        callback.update(data);
-        Log.e(TAG, "initData: ");
+    void initData() {
+        callback.showData("模拟网络请求");
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-    public void connectListener() {
-        Log.e(TAG, "connectListener: ");
+    void update(){
+        callback.showData("模拟修改数据");
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    public void disconnectListener() {
-        Log.e(TAG, "disconnectListener: ");
-    }
-
-
-    public interface MyCallback{
-        //更新数据
-        void update(String data);
-    }
 }
