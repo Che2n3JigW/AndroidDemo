@@ -17,6 +17,7 @@
 package com.example.android.persistence.ui;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         // Add product list fragment if this is first creation
         if (savedInstanceState == null) {
             ProductListFragment fragment = new ProductListFragment();
-
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment_container, fragment, ProductListFragment.TAG).commit();
         }

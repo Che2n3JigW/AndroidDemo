@@ -32,4 +32,8 @@ public class MyViewModel extends ViewModel implements LifecycleObserver {
             number.setValue(value+1);
         }
     }
+
+    public void showToast(){
+
+    }
 }

@@ -58,6 +58,7 @@
                 android:id="@+id/comments_list_wrapper">
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:background="@color/colorAccent"
                     android:id="@+id/comment_list"
                     android:contentDescription="@string/cd_comments_list"
                     android:layout_width="match_parent"

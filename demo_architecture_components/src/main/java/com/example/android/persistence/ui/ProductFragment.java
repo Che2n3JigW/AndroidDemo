@@ -24,17 +24,11 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.android.persistence.R;
 import com.example.android.persistence.databinding.ProductFragmentBinding;
-import com.example.android.persistence.db.entity.CommentEntity;
-import com.example.android.persistence.db.entity.ProductEntity;
-import com.example.android.persistence.model.Comment;
 import com.example.android.persistence.viewmodel.ProductViewModel;
-
-import java.util.List;
 
 public class ProductFragment extends Fragment {
 
@@ -53,25 +47,19 @@ public class ProductFragment extends Fragment {
 
         // Create and set the adapter for the RecyclerView.
         mCommentAdapter = new CommentAdapter(mCommentClickCallback);
-        mBinding.commentList.setAdapter(mCommentAdapter);
+//        mBinding.commentList.setAdapter(mCommentAdapter);
         return mBinding.getRoot();
     }
 
-    private final CommentClickCallback mCommentClickCallback = new CommentClickCallback() {
-        @Override
-        public void onClick(Comment comment) {
-            // no-op
-
-        }
+    private final CommentClickCallback mCommentClickCallback = comment -> {
+        //Todo
     };
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         ProductViewModel.Factory factory = new ProductViewModel.Factory(
                 requireActivity().getApplication(), getArguments().getInt(KEY_PRODUCT_ID));
-
         final ProductViewModel model = new ViewModelProvider(this, factory)
                 .get(ProductViewModel.class);
 
@@ -83,23 +71,15 @@ public class ProductFragment extends Fragment {
     private void subscribeToModel(final ProductViewModel model) {
 
         // Observe product data
-        model.getObservableProduct().observe(this, new Observer<ProductEntity>() {
-            @Override
-            public void onChanged(@Nullable ProductEntity productEntity) {
-                model.setProduct(productEntity);
-            }
-        });
+        model.getObservableProduct().observe(this, model::setProduct);
 
         // Observe comments
-        model.getComments().observe(this, new Observer<List<CommentEntity>>() {
-            @Override
-            public void onChanged(@Nullable List<CommentEntity> commentEntities) {
-                if (commentEntities != null) {
-                    mBinding.setIsLoading(false);
-                    mCommentAdapter.setCommentList(commentEntities);
-                } else {
-                    mBinding.setIsLoading(true);
-                }
+        model.getComments().observe(this, commentEntities -> {
+            if (commentEntities != null) {
+                mBinding.setIsLoading(false);
+                mCommentAdapter.setCommentList(commentEntities);
+            } else {
+                mBinding.setIsLoading(true);
             }
         });
     }
