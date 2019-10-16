@@ -9,4 +9,5 @@
     <string name="new_document_button_text">new_document_button_text</string>
     <string name="multiple_task_checkbox_label">multiple_task_checkbox_label</string>
     <string name="seconds">%d seconds elapsed</string>
+    <string name="todo">TODO</string>
 </resources>

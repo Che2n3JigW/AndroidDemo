@@ -13,7 +13,7 @@ public class Constant {
     public static final String MAIN_INTENT = "INTENT";
     public static final String MAIN_RECENT = "RECENT";
     public static final String MAIN_HELLO_JNI = "HELLO_JNI";
-    public static final String MAIN_LIFECYCLE = "HELLO_LIFECYCLE";
+    public static final String MAIN_MVVM = "HELLO_MVVM";
 
     public final static String KEY_EXTRA_NEW_DOCUMENT_COUNTER
             = "KEY_EXTRA_NEW_DOCUMENT_COUNTER";

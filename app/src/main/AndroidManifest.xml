@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".my_lifecycle.LifecycleDemoActivity"></activity>
+        <activity android:name=".mvvm.MvvmActivity"></activity>
         <activity android:name=".recents.DocumentCentricActivity" />
         <activity android:name=".recents.NewDocumentActivity" />
         <activity android:name=".intent.IntentDemoActivity" />
