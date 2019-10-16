@@ -18,4 +18,10 @@ public class Constant {
     public final static String KEY_EXTRA_NEW_DOCUMENT_COUNTER
             = "KEY_EXTRA_NEW_DOCUMENT_COUNTER";
 
+
+    /*
+    net
+     */
+    public static final String URL_BASE = "https://api.github.com";
+
 }

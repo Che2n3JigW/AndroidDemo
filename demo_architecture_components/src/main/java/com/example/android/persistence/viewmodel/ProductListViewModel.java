@@ -40,6 +40,7 @@ public class ProductListViewModel extends AndroidViewModel {
         mObservableProducts.setValue(null);
 
         mRepository = ((BasicApp) application).getRepository();
+        //模拟网络获取数据
         LiveData<List<ProductEntity>> products = mRepository.getProducts();
 
         // observe the changes of the products from the database and forward them

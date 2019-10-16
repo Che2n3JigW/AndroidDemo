@@ -1,4 +1,4 @@
-#Wed Oct 16 19:53:47 CST 2019
+#Thu Oct 17 00:10:05 CST 2019
 base.0=E\:\\Android\\BaseDemo\\demo_architecture_components\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

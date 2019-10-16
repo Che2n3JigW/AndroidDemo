@@ -51,30 +51,29 @@
 37-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:30:9-41
 38        android:supportsRtl="true"
 38-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:31:9-35
-39        android:testOnly="true"
-40        android:theme="@style/AppTheme" >
-40-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:32:9-40
-41        <activity android:name="com.example.android.persistence.ui.MainActivity" >
-41-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:33:9-38:20
-41-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:33:19-81
-42            <intent-filter>
-42-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:34:13-37:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:35:17-68
-43-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:35:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:36:17-76
-45-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:36:27-74
-46            </intent-filter>
-47        </activity>
-48
-49        <service
-49-->[androidx.room:room-runtime:2.2.0] D:\Android\.gradle\caches\transforms-2\files-2.1\1e99c14c9441faae30083380f6200d97\room-runtime-2.2.0\AndroidManifest.xml:25:9-27:40
-50            android:name="androidx.room.MultiInstanceInvalidationService"
-50-->[androidx.room:room-runtime:2.2.0] D:\Android\.gradle\caches\transforms-2\files-2.1\1e99c14c9441faae30083380f6200d97\room-runtime-2.2.0\AndroidManifest.xml:26:13-74
-51            android:exported="false" />
-51-->[androidx.room:room-runtime:2.2.0] D:\Android\.gradle\caches\transforms-2\files-2.1\1e99c14c9441faae30083380f6200d97\room-runtime-2.2.0\AndroidManifest.xml:27:13-37
-52    </application>
-53
-54</manifest>
+39        android:theme="@style/AppTheme" >
+39-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:32:9-40
+40        <activity android:name="com.example.android.persistence.ui.MainActivity" >
+40-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:33:9-38:20
+40-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:33:19-81
+41            <intent-filter>
+41-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:34:13-37:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:35:17-68
+42-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:35:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:36:17-76
+44-->E:\Android\BaseDemo\demo_architecture_components\src\main\AndroidManifest.xml:36:27-74
+45            </intent-filter>
+46        </activity>
+47
+48        <service
+48-->[androidx.room:room-runtime:2.2.0] D:\Android\.gradle\caches\transforms-2\files-2.1\1e99c14c9441faae30083380f6200d97\room-runtime-2.2.0\AndroidManifest.xml:25:9-27:40
+49            android:name="androidx.room.MultiInstanceInvalidationService"
+49-->[androidx.room:room-runtime:2.2.0] D:\Android\.gradle\caches\transforms-2\files-2.1\1e99c14c9441faae30083380f6200d97\room-runtime-2.2.0\AndroidManifest.xml:26:13-74
+50            android:exported="false" />
+50-->[androidx.room:room-runtime:2.2.0] D:\Android\.gradle\caches\transforms-2\files-2.1\1e99c14c9441faae30083380f6200d97\room-runtime-2.2.0\AndroidManifest.xml:27:13-37
+51    </application>
+52
+53</manifest>
