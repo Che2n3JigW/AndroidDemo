@@ -8,6 +8,9 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
+/**
+ * api接口
+ */
 public interface GitHubService {
     @GET("/repos/{owner}/{repo}/contributors")
     Call<List<Contributor>> contributors(

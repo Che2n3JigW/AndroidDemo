@@ -1,4 +1,4 @@
-package com.example.basedemo.recents;
+package com.example.basedemo.recent;
 
 import android.app.Activity;
 import android.content.Intent;
