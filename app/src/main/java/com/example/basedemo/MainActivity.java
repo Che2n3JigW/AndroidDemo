@@ -1,6 +1,8 @@
 package com.example.basedemo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private MyListAdapter adapter;
     private String[] strings;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,27 @@ public class MainActivity extends AppCompatActivity {
         initView();
 
         initListener();
+
+        Log.e(TAG, "onCreate: " + Thread.currentThread().getId() );
+        Log.e(TAG, "before StartService" );
+
+        //连续启动Service
+        Intent intent1 = new Intent(this, MyService.class);
+        Intent intent2 = new Intent(this, MyService.class);
+        Intent intent3 = new Intent(this, MyService.class);
+        startService(intent1);
+        startService(intent2);
+        startService(intent3);
+
+        Intent intent4 = new Intent(this, MyService.class);
+        stopService(intent4);
+
+        Intent intent5 = new Intent(this, MyService.class);
+        startService(intent5);
+
+        Log.e(TAG, "after StartService");
+
+
 
     }
 
