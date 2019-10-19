@@ -1,0 +1,61 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2014 The Android Open Source Project
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.basictransition"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="21"
+23-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="29" />
+24-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml
+25
+26    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+27    <application
+27-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:24:5-38:19
+28        android:allowBackup="true"
+28-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:25:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.1.0] D:\Android\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:icon="@drawable/ic_launcher"
+31-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:26:9-45
+32        android:label="@string/app_name"
+32-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:27:9-41
+33        android:theme="@style/AppTheme" >
+33-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:28:9-40
+34        <activity
+34-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:29:9-37:20
+35            android:name="com.example.android.basictransition.MainActivity"
+35-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:30:13-41
+36            android:label="@string/app_name" >
+36-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:31:13-45
+37            <intent-filter>
+37-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:32:13-36:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:33:17-69
+38-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:33:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:35:17-77
+40-->E:\Android\BaseDemo\demo_transitionn_base\src\main\AndroidManifest.xml:35:27-74
+41            </intent-filter>
+42        </activity>
+43    </application>
+44
+45</manifest>

@@ -1,2 +1,2 @@
-include ':app', ':demo_transitionn_base', ':demo_hello_jni', ':demo_native_activity', ':demo_architecture_components'
+include ':app', ':demo_transitionn_base', ':demo_hello_jni', ':demo_native_activity', ':demo_architecture_components', ':notification_demo', ':Shared', ':Wearable'
 rootProject.name='BaseDemo'

@@ -1,6 +1,5 @@
 package com.example.basedemo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -12,6 +11,7 @@ import com.example.basedemo.animation.AttributeAnimationActivity;
 import com.example.basedemo.common.Constant;
 import com.example.basedemo.components4.activity.ActActivity;
 import com.example.basedemo.components4.fragment.FragmentDemoActivity;
+import com.example.basedemo.components4.notification.NotificationDemoActivity;
 import com.example.basedemo.intent.IntentDemoActivity;
 import com.example.basedemo.mvvm.MvvmActivity;
 import com.example.basedemo.recent.DocumentCentricActivity;
@@ -38,24 +38,6 @@ public class MainActivity extends AppCompatActivity {
         Log.e(TAG, "onCreate: " + Thread.currentThread().getId() );
         Log.e(TAG, "before StartService" );
 
-        //连续启动Service
-        Intent intent1 = new Intent(this, MyService.class);
-        Intent intent2 = new Intent(this, MyService.class);
-        Intent intent3 = new Intent(this, MyService.class);
-        startService(intent1);
-        startService(intent2);
-        startService(intent3);
-
-        Intent intent4 = new Intent(this, MyService.class);
-        stopService(intent4);
-
-        Intent intent5 = new Intent(this, MyService.class);
-        startService(intent5);
-
-        Log.e(TAG, "after StartService");
-
-
-
     }
 
     private void initData() {
@@ -70,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 Constant.MAIN_RECENT,
                 Constant.MAIN_HELLO_JNI,
                 Constant.MAIN_MVVM,
+                Constant.MAIN_NOTIFICATION
         };
     }
 
@@ -98,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case Constant.MAIN_MVVM:
                     ActivityUtils.startActivity(MvvmActivity.class);
+                    break;
+                case Constant.MAIN_NOTIFICATION:
+                    ActivityUtils.startActivity(NotificationDemoActivity.class);
                     break;
             }
         });

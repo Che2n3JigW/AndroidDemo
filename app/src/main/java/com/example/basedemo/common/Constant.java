@@ -14,6 +14,7 @@ public class Constant {
     public static final String MAIN_RECENT = "RECENT";
     public static final String MAIN_HELLO_JNI = "HELLO_JNI";
     public static final String MAIN_MVVM = "HELLO_MVVM";
+    public static final String MAIN_NOTIFICATION = "MAIN_NOTIFICATION";
 
     public final static String KEY_EXTRA_NEW_DOCUMENT_COUNTER
             = "KEY_EXTRA_NEW_DOCUMENT_COUNTER";

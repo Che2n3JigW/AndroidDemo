@@ -10,4 +10,6 @@
     <string name="multiple_task_checkbox_label">multiple_task_checkbox_label</string>
     <string name="seconds">%d seconds elapsed</string>
     <string name="todo">TODO</string>
+    <string name="channel_name">channel_name</string>
+    <string name="channel_description">channel_description</string>
 </resources>

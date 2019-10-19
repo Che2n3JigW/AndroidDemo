@@ -1,0 +1,174 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3  ~ Copyright 2016 Google Inc.
+4  ~
+5  ~ Licensed under the Apache License, Version 2.0 (the "License");
+6  ~ you may not use this file except in compliance with the License.
+7  ~ You may obtain a copy of the License at
+8  ~
+9  ~      http://www.apache.org/licenses/LICENSE-2.0
+10  ~
+11  ~ Unless required by applicable law or agreed to in writing, software
+12  ~ distributed under the License is distributed on an "AS IS" BASIS,
+13  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14  ~ See the License for the specific language governing permissions and
+15  ~ limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.wearable.wear.wearnotifications"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="23"
+23-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="29" />
+24-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml
+25
+26    <uses-feature android:name="android.hardware.type.watch" />
+26-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:22:5-63
+26-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:22:19-61
+27    <!-- Required for Always-on. -->
+28    <uses-permission android:name="android.permission.WAKE_LOCK" />
+28-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:24:5-68
+28-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:24:22-65
+29
+30    <application
+30-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:26:5-98:19
+31        android:allowBackup="true"
+31-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:26:18-44
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.1.0] D:\Android\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:icon="@mipmap/ic_launcher"
+34-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:27:18-52
+35        android:label="@string/app_name"
+35-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:28:18-50
+36        android:supportsRtl="true"
+36-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:29:18-44
+37        android:theme="@android:style/Theme.Material" >
+37-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:30:18-63
+38
+39        <!-- Let's Play Store know this app is standalone. -->
+40        <meta-data
+40-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:33:9-96
+41            android:name="com.google.android.wearable.standalone"
+41-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:33:20-73
+42            android:value="true" />
+42-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:33:74-94
+43
+44        <!--
+45        Important Note: Usually, you will want to disable bridging if you have a local/native
+46        Wear app creating Notifications. In our case, we don't, as our sample shows both
+47        Notifications launched from a Phone app (that needed to be bridged) and a Wear app.
+48
+49        To disable, create a meta-data tag here:
+50
+51        meta-data
+52            name: com.google.android.wearable.notificationBridgeMode
+53            value: NO_BRIDGING
+54        -->
+55
+56
+57        <!-- If you want your app to run on pre-22, then set required to false -->
+58        <uses-library
+58-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:48:9-93
+59            android:name="com.google.android.wearable"
+59-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:48:23-65
+60            android:required="false" />
+60-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:48:66-90
+61
+62        <activity
+62-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:50:9-56:20
+63            android:name="com.example.android.wearable.wear.wearnotifications.StandaloneMainActivity"
+63-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:50:19-57
+64            android:label="@string/app_name" >
+64-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:51:19-51
+65            <intent-filter>
+65-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:52:13-55:29
+66                <action android:name="android.intent.action.MAIN" />
+66-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:53:17-69
+66-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:53:25-66
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:54:17-77
+68-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:54:27-74
+69            </intent-filter>
+70        </activity>
+71        <activity
+71-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:59:9-63:20
+72            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextMainActivity"
+72-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:60:13-57
+73            android:label="@string/title_activity_big_text_main"
+73-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:61:13-65
+74            android:taskAffinity="" >
+74-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:62:13-36
+75        </activity>
+76        <activity
+76-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:65:9-69:20
+77            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialMainActivity"
+77-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:66:13-66
+78            android:label="@string/title_activity_big_picture_main"
+78-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:67:13-68
+79            android:taskAffinity="" >
+79-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:68:13-36
+80        </activity>
+81        <activity
+81-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:72:9-76:20
+82            android:name="com.example.android.wearable.wear.wearnotifications.handlers.InboxMainActivity"
+82-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:73:13-55
+83            android:label="@string/title_activity_inbox_main"
+83-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:74:13-62
+84            android:taskAffinity="" >
+84-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:75:13-36
+85        </activity>
+86        <activity
+86-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:78:9-82:20
+87            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingMainActivity"
+87-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:79:13-59
+88            android:label="@string/title_activity_messaging_main"
+88-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:80:13-66
+89            android:taskAffinity="" >
+89-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:81:13-36
+90        </activity>
+91
+92        <service
+92-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:84:9-87:19
+93            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextIntentService"
+93-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:85:13-58
+94            android:exported="false" >
+94-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:86:13-37
+95        </service>
+96        <service
+96-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:89:9-92:19
+97            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingIntentService"
+97-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:90:13-60
+98            android:exported="false" >
+98-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:91:13-37
+99        </service>
+100        <service
+100-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:94:9-97:19
+101            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialIntentService"
+101-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:95:13-67
+102            android:exported="false" >
+102-->E:\Android\BaseDemo\Wearable\src\main\AndroidManifest.xml:96:13-37
+103        </service>
+104
+105        <activity
+105-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+106            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+106-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+107            android:exported="false"
+107-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+108            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+108-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+109
+110        <meta-data
+110-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+111            android:name="com.google.android.gms.version"
+111-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+112            android:value="@integer/google_play_services_version" />
+112-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+113    </application>
+114
+115</manifest>
