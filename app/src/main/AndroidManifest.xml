@@ -15,7 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".components4.notification.NotificationDemoActivity"></activity>
+        <activity
+            android:name=".appbar.AppbarDemoActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
+        <activity android:name=".components4.notification.NotificationDemoActivity" />
         <activity android:name=".mvvm.MvvmActivity" />
         <activity android:name=".recent.DocumentCentricActivity" />
         <activity android:name=".recent.NewDocumentActivity" />

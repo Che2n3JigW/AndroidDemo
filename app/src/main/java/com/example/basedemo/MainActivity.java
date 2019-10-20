@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.basedemo.animation.AttributeAnimationActivity;
+import com.example.basedemo.appbar.AppbarDemoActivity;
 import com.example.basedemo.common.Constant;
 import com.example.basedemo.components4.activity.ActActivity;
 import com.example.basedemo.components4.fragment.FragmentDemoActivity;
@@ -52,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
                 Constant.MAIN_RECENT,
                 Constant.MAIN_HELLO_JNI,
                 Constant.MAIN_MVVM,
-                Constant.MAIN_NOTIFICATION
+                Constant.MAIN_NOTIFICATION,
+                Constant.MAIN_APPBAR
         };
     }
 
@@ -84,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case Constant.MAIN_NOTIFICATION:
                     ActivityUtils.startActivity(NotificationDemoActivity.class);
+                    break;
+                case Constant.MAIN_APPBAR:
+                    ActivityUtils.startActivity(AppbarDemoActivity.class);
                     break;
             }
         });
