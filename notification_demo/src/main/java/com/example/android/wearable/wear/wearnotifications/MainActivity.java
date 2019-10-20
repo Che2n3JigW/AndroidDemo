@@ -29,8 +29,6 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationCompat.Action;
@@ -53,28 +51,31 @@ import com.example.android.wearable.wear.wearnotifications.handlers.BigTextMainA
 import com.example.android.wearable.wear.wearnotifications.handlers.InboxMainActivity;
 import com.example.android.wearable.wear.wearnotifications.handlers.MessagingIntentService;
 import com.example.android.wearable.wear.wearnotifications.handlers.MessagingMainActivity;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * The Activity demonstrates several popular Notification.Style examples along with their best
  * practices (include proper Wear support when you don't have a dedicated Wear app).
  */
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity
+        implements AdapterView.OnItemSelectedListener {
 
     public static final String TAG = "MainActivity";
 
     public static final int NOTIFICATION_ID = 888;
 
-    // Used for Notification Style array and switch statement for Spinner selection.
+    //通知类型
     private static final String BIG_TEXT_STYLE = "BIG_TEXT_STYLE";
     private static final String BIG_PICTURE_STYLE = "BIG_PICTURE_STYLE";
     private static final String INBOX_STYLE = "INBOX_STYLE";
     private static final String MESSAGING_STYLE = "MESSAGING_STYLE";
 
-    // Collection of notification styles to back ArrayAdapter for Spinner.
+    // 初始化类型数组
     private static final String[] NOTIFICATION_STYLES = {
             BIG_TEXT_STYLE, BIG_PICTURE_STYLE, INBOX_STYLE, MESSAGING_STYLE
     };
 
+    //类型声明
     private static final String[] NOTIFICATION_STYLES_DESCRIPTION = {
             "Demos reminder type app using BIG_TEXT_STYLE",
             "Demos social type app using BIG_PICTURE_STYLE + inline notification response",
@@ -84,9 +85,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private NotificationManagerCompat mNotificationManagerCompat;
 
+    //当前选中项索引
     private int mSelectedNotification = 0;
 
-    // RelativeLayout required for SnackBars to alert users when Notifications are disabled for app.
+    // 控件声明
     private RelativeLayout mMainRelativeLayout;
     private Spinner mSpinner;
     private TextView mNotificationDetailsTextView;
@@ -97,21 +99,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mMainRelativeLayout = (RelativeLayout) findViewById(R.id.mainRelativeLayout);
-        mNotificationDetailsTextView = (TextView) findViewById(R.id.notificationDetails);
-        mSpinner = (Spinner) findViewById(R.id.spinner);
+        mMainRelativeLayout = findViewById(R.id.mainRelativeLayout);
+        mNotificationDetailsTextView = findViewById(R.id.notificationDetails);
+        mSpinner = findViewById(R.id.spinner);
 
-        mNotificationManagerCompat = NotificationManagerCompat.from(getApplicationContext());
+        mNotificationManagerCompat
+                = NotificationManagerCompat.from(getApplicationContext());
 
         // Create an ArrayAdapter using the string array and a default spinner layout.
-        ArrayAdapter<CharSequence> adapter =
-                new ArrayAdapter(
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<>(
                         this,
                         android.R.layout.simple_spinner_item,
                         NOTIFICATION_STYLES);
         // Specify the layout to use when the list of choices appears.
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner.
+        // 设置适配器
         mSpinner.setAdapter(adapter);
         mSpinner.setOnItemSelectedListener(this);
     }
@@ -134,7 +137,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Log.d(TAG, "onClick()");
 
-        boolean areNotificationsEnabled = mNotificationManagerCompat.areNotificationsEnabled();
+        //通知是否被阻塞
+        boolean areNotificationsEnabled
+                = mNotificationManagerCompat.areNotificationsEnabled();
 
         if (!areNotificationsEnabled) {
             // Because the user took an action to create a notification, we create a prompt to let
@@ -147,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     .setAction("ENABLE", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            // Links to this app's notification settings
+                            // 跳到设置页面
                             openNotificationSettingsForApp();
                         }
                     });
@@ -188,57 +193,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Log.d(TAG, "generateBigTextStyleNotification()");
 
-        // Main steps for building a BIG_TEXT_STYLE notification:
-        //      0. Get your data
+        // 步骤
+        //      0. 获取数据
         //      1. Create/Retrieve Notification Channel for O and beyond devices (26+)
         //      2. Build the BIG_TEXT_STYLE
         //      3. Set up main Intent for notification
         //      4. Create additional Actions for the Notification
         //      5. Build and issue the notification
 
-        // 0. Get your data (everything unique per Notification).
+        // 0. 模拟数据
         MockDatabase.BigTextStyleReminderAppData bigTextStyleReminderAppData =
                 MockDatabase.getBigTextStyleData();
 
-        // 1. Create/Retrieve Notification Channel for O and beyond devices (26+).
+        // 1. ChannelId 通道 (26以上需要).
         String notificationChannelId =
                 NotificationUtil.createNotificationChannel(this, bigTextStyleReminderAppData);
 
 
-        // 2. Build the BIG_TEXT_STYLE.
+        // 2. 设置样式
         BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle()
-                // Overrides ContentText in the big form of the template.
                 .bigText(bigTextStyleReminderAppData.getBigText())
-                // Overrides ContentTitle in the big form of the template.
                 .setBigContentTitle(bigTextStyleReminderAppData.getBigContentTitle())
-                // Summary line after the detail section in the big form of the template.
-                // Note: To improve readability, don't overload the user with info. If Summary Text
-                // doesn't add critical information, you should skip it.
                 .setSummaryText(bigTextStyleReminderAppData.getSummaryText());
 
 
-        // 3. Set up main Intent for notification.
+        // 3. 设置跳转
         Intent notifyIntent = new Intent(this, BigTextMainActivity.class);
-
-        // When creating your Intent, you need to take into account the back state, i.e., what
-        // happens after your Activity launches and the user presses the back button.
-
-        // There are two options:
-        //      1. Regular activity - You're starting an Activity that's part of the application's
-        //      normal workflow.
-
-        //      2. Special activity - The user only sees this Activity if it's started from a
-        //      notification. In a sense, the Activity extends the notification by providing
-        //      information that would be hard to display in the notification itself.
-
-        // For the BIG_TEXT_STYLE notification, we will consider the activity launched by the main
-        // Intent as a special activity, so we will follow option 2.
-
-        // For an example of option 1, check either the MESSAGING_STYLE or BIG_PICTURE_STYLE
-        // examples.
-
-        // For more information, check out our dev article:
-        // https://developer.android.com/training/notify-user/navigation.html
 
         // Sets the Activity to start in a new, empty task
         notifyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -254,8 +234,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         // 4. Create additional Actions (Intents) for the Notification.
 
-        // In our case, we create two additional actions: a Snooze action and a Dismiss action.
-        // Snooze Action.
+        // 先消失后显示的动作
         Intent snoozeIntent = new Intent(this, BigTextIntentService.class);
         snoozeIntent.setAction(BigTextIntentService.ACTION_SNOOZE);
 
@@ -268,7 +247,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         .build();
 
 
-        // Dismiss Action.
+        // 消失按钮的操作.
         Intent dismissIntent = new Intent(this, BigTextIntentService.class);
         dismissIntent.setAction(BigTextIntentService.ACTION_DISMISS);
 
@@ -381,26 +360,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         // 3. Set up main Intent for notification.
         Intent mainIntent = new Intent(this, BigPictureSocialMainActivity.class);
-
-        // When creating your Intent, you need to take into account the back state, i.e., what
-        // happens after your Activity launches and the user presses the back button.
-
-        // There are two options:
-        //      1. Regular activity - You're starting an Activity that's part of the application's
-        //      normal workflow.
-
-        //      2. Special activity - The user only sees this Activity if it's started from a
-        //      notification. In a sense, the Activity extends the notification by providing
-        //      information that would be hard to display in the notification itself.
-
-        // Even though this sample's MainActivity doesn't link to the Activity this Notification
-        // launches directly, i.e., it isn't part of the normal workflow, a social app generally
-        // always links to individual posts as part of the app flow, so we will follow option 1.
-
-        // For an example of option 2, check out the BIG_TEXT_STYLE example.
-
-        // For more information, check out our dev article:
-        // https://developer.android.com/training/notify-user/navigation.html
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
         // Adds the back stack.

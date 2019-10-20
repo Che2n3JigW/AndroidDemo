@@ -19,7 +19,6 @@ import android.app.NotificationManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
-import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationCompat.MessagingStyle;
@@ -30,7 +29,7 @@ import com.example.android.wearable.wear.wearnotifications.common.R;
 
 import java.util.ArrayList;
 
-/** Mock data for each of the Notification Style Demos. */
+/** 模拟数据 */
 public final class MockDatabase {
 
     public static BigTextStyleReminderAppData getBigTextStyleData() {

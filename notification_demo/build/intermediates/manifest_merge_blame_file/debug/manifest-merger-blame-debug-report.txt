@@ -38,110 +38,111 @@
 31-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:25:9-41
 32        android:supportsRtl="true"
 32-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:26:9-35
-33        android:theme="@style/AppThemeOverride" >
-33-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:27:9-48
-34        <activity android:name="com.example.android.wearable.wear.wearnotifications.MainActivity" >
-34-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:29:9-34:20
-34-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:29:19-47
-35            <intent-filter>
-35-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:30:13-33:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:31:17-68
-36-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:31:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:32:17-76
-38-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:32:27-74
-39            </intent-filter>
-40        </activity>
-41        <activity
-41-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:36:9-41:20
-42            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextMainActivity"
-42-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:37:13-57
-43            android:excludeFromRecents="true"
-43-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:38:13-46
-44            android:label="@string/title_activity_big_text_main"
-44-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:39:13-65
-45            android:taskAffinity="" >
-45-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:40:13-36
-46        </activity>
-47        <activity
-47-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:43:9-49:20
-48            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialMainActivity"
-48-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:44:13-66
-49            android:label="@string/title_activity_big_picture_main" >
-49-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:45:13-68
-50            <meta-data
-50-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:46:13-48:48
-51                android:name="android.support.PARENT_ACTIVITY"
-51-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:47:17-63
-52                android:value=".MainActivity" />
-52-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:48:17-46
-53        </activity>
-54        <activity
-54-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:52:9-58:20
-55            android:name="com.example.android.wearable.wear.wearnotifications.handlers.InboxMainActivity"
-55-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:53:13-55
-56            android:label="@string/title_activity_inbox_main" >
-56-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:54:13-62
-57            <meta-data
-57-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:46:13-48:48
-58                android:name="android.support.PARENT_ACTIVITY"
-58-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:47:17-63
-59                android:value=".MainActivity" />
-59-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:48:17-46
-60        </activity>
-61        <activity
-61-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:60:9-66:20
-62            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingMainActivity"
-62-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:61:13-59
-63            android:label="@string/title_activity_messaging_main" >
-63-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:62:13-66
-64            <meta-data
-64-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:46:13-48:48
-65                android:name="android.support.PARENT_ACTIVITY"
-65-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:47:17-63
-66                android:value=".MainActivity" />
-66-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:48:17-46
-67        </activity>
-68
-69        <service
-69-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:68:9-71:19
-70            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextIntentService"
-70-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:69:13-58
-71            android:exported="false" >
-71-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:70:13-37
-72        </service>
-73        <service
-73-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:73:9-76:19
-74            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingIntentService"
-74-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:74:13-60
-75            android:exported="false" >
-75-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:75:13-37
-76        </service>
-77        <service
-77-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:78:9-81:19
-78            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialIntentService"
-78-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:79:13-67
-79            android:exported="false" >
-79-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:80:13-37
-80        </service>
-81
-82        <activity
-82-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-83            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-83-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-84            android:exported="false"
-84-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-85            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-85-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-86
-87        <meta-data
-87-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-88            android:name="com.google.android.gms.version"
-88-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-89            android:value="@integer/google_play_services_version" />
-89-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-90    </application>
-91
-92</manifest>
+33        android:testOnly="true"
+34        android:theme="@style/AppThemeOverride" >
+34-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:27:9-48
+35        <activity android:name="com.example.android.wearable.wear.wearnotifications.MainActivity" >
+35-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:29:9-34:20
+35-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:29:19-47
+36            <intent-filter>
+36-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:30:13-33:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:31:17-68
+37-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:31:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:32:17-76
+39-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:32:27-74
+40            </intent-filter>
+41        </activity>
+42        <activity
+42-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:36:9-41:20
+43            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextMainActivity"
+43-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:37:13-57
+44            android:excludeFromRecents="true"
+44-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:38:13-46
+45            android:label="@string/title_activity_big_text_main"
+45-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:39:13-65
+46            android:taskAffinity="" >
+46-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:40:13-36
+47        </activity>
+48        <activity
+48-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:43:9-49:20
+49            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialMainActivity"
+49-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:44:13-66
+50            android:label="@string/title_activity_big_picture_main" >
+50-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:45:13-68
+51            <meta-data
+51-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:46:13-48:48
+52                android:name="android.support.PARENT_ACTIVITY"
+52-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:47:17-63
+53                android:value=".MainActivity" />
+53-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:48:17-46
+54        </activity>
+55        <activity
+55-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:52:9-58:20
+56            android:name="com.example.android.wearable.wear.wearnotifications.handlers.InboxMainActivity"
+56-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:53:13-55
+57            android:label="@string/title_activity_inbox_main" >
+57-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:54:13-62
+58            <meta-data
+58-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:46:13-48:48
+59                android:name="android.support.PARENT_ACTIVITY"
+59-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:47:17-63
+60                android:value=".MainActivity" />
+60-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:48:17-46
+61        </activity>
+62        <activity
+62-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:60:9-66:20
+63            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingMainActivity"
+63-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:61:13-59
+64            android:label="@string/title_activity_messaging_main" >
+64-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:62:13-66
+65            <meta-data
+65-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:46:13-48:48
+66                android:name="android.support.PARENT_ACTIVITY"
+66-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:47:17-63
+67                android:value=".MainActivity" />
+67-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:48:17-46
+68        </activity>
+69
+70        <service
+70-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:68:9-71:19
+71            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextIntentService"
+71-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:69:13-58
+72            android:exported="false" >
+72-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:70:13-37
+73        </service>
+74        <service
+74-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:73:9-76:19
+75            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingIntentService"
+75-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:74:13-60
+76            android:exported="false" >
+76-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:75:13-37
+77        </service>
+78        <service
+78-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:78:9-81:19
+79            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialIntentService"
+79-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:79:13-67
+80            android:exported="false" >
+80-->E:\Android\BaseDemo\notification_demo\src\main\AndroidManifest.xml:80:13-37
+81        </service>
+82
+83        <activity
+83-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+84            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+84-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+85            android:exported="false"
+85-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+86            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+86-->[com.google.android.gms:play-services-base:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+87
+88        <meta-data
+88-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+89            android:name="com.google.android.gms.version"
+89-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+90            android:value="@integer/google_play_services_version" />
+90-->[com.google.android.gms:play-services-basement:17.0.0] D:\Android\.gradle\caches\transforms-2\files-2.1\045803657977c38c2ff16942685fc8e2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+91    </application>
+92
+93</manifest>
